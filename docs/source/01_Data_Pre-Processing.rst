@@ -89,6 +89,14 @@ Lets download the assembled genome in fasta file now
 
 E) Map the trimmed data to a reference - in our case to Athene cucnicularia
 ---------------------------------------------------------------------------
+Before we start mapping the data, we need to ``index`` the reference. 
+
+.. code-block:: console
+
+ $ ~/softs/bwa/bwa index ~/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa
+
+Now we can start mapping
+
 
 .. code-block:: bash
 
