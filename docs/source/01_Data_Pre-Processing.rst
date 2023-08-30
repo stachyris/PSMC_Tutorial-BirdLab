@@ -50,13 +50,27 @@ I am creating a new folder named ``mapping`` under my ``PSMC_Tut`` directory. Ha
 
 Your directory should look like this now
 
-vinaykl <\br>
-   |_____ PSMC_Tut <\br>
-             |______SRR12705961 <\br>
-             |          |_____fastqc_reports <\br>
-             |          |_____ Other Raw and Trimmed files <\br>
-             |
-             |______ Mapping <\br>
+.. code-block:: concole
+
+.. code-block:: console
+
+ ├──SRR12705961
+ │   ├── JO_R1_paired.fq.gz
+ │   ├── JO_R1_unpaired.fq.gz
+ │   ├── JO_R2_paired.fq.gz
+ │   ├── JO_R2_unpaired.fq.gz
+ │   ├── JO_summary.txt
+ │   ├── JO_trim.log
+ │   ├── SRR12705961_1.fastq.gz
+ │   ├── SRR12705961_2.fastq.gz
+ │   └── fastqc_reports
+ │       ├── SRR12705961_1_fastqc.html
+ │       ├── SRR12705961_1_fastqc.zip
+ │       ├── SRR12705961_2_fastqc.html
+ │       └── SRR12705961_2_fastqc.zip
+ └── mapping
+     └── Athene_cunicularia.athCun1.dna.toplevel.fa
+
 
 E) Map the trimmed data to a reference - in our case to Athene cucnicularia
 ---------------------------------------------------------------------------
