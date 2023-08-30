@@ -2,19 +2,21 @@ Data pre-processing steps for PSMC using Jungle Owlet
 =====================================================
 
 .. note::
-1) Make sure all of your packages are in your $PATH
-2) Create a folder to work all of this - mine says "PSMC_Tut"
-3) My working directory path is this - /Users/vinaykl/PSMC_Tut
-4) And all of my packages are in /Users/vinaykl/softs
-5) Remove the ``$`` sign from all of your code, if you copy from here. It denotes the beginning of prompt
+
+ 1) Make sure all of your packages are in your $PATH
+ 2) Create a folder to work all of this - mine says "PSMC_Tut"
+ 3) My working directory path is this - /Users/vinaykl/PSMC_Tut
+ 4) And all of my packages are in /Users/vinaykl/softs
+ 5) Remove the ``$`` sign from all of your code, if you copy from here. It denotes the beginning of prompt
 
 A) Download Data for Jungle Owlet from NCBI Cloud 
 ----------------------------------------------
 
 .. note::
 
-1) The direct FTP server are no longer active - for the ease of it, I have uploaded to GDrive and you people can download from there. \ 
-2) These files are slightly larger - try and see if you can have a space about 100GB. \
+ 1) The direct FTP server are no longer active - for the ease of it, I have uploaded to GDrive and you 
+ people can download from there. \ 
+ 2) These files are slightly larger - try and see if you can have a space about 100GB. \
 
 B) Check the QC of your RAW file
 -----------------------------
