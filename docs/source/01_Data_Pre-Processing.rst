@@ -37,17 +37,17 @@ C) Trim the RAW files using Trimmomatic
   ILLUMINACLIP:/Users/vinaykl/softs/Trimmomatic-0.39/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 
   TRAILING:3 MINLEN:36
 
-E) Get the reference genome
+D) Get the reference genome
 ---------------------------
 While the trimming is going on, let us get the reference genome - Athene cunicularia - from Ensemble
 
 .. code-block:: console
 
- $ wget https://ftp.ensembl.org/pub/release- 110/fasta/athene_cunicularia/dna/Athene_cunicularia.athCun1.dna.toplevel.fa.gz
+ $ wget https://ftp.ensembl.org/pub/release-110/fasta/athene_cunicularia/dna/Athene_cunicularia.athCun1.dna.toplevel.fa.gz
  
  $ gunzip Athene_cunicularia.athCun1.dna.toplevel.fa.gz
 
-D) Map the trimmed data to a reference - in our case to Athene cucnicularia
+E) Map the trimmed data to a reference - in our case to Athene cucnicularia
 ---------------------------------------------------------------------------
 
 .. code-block:: bash
