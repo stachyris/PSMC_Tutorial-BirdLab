@@ -22,8 +22,7 @@ B) Check the QC of your RAW file
 .. code-block:: console
   
   $ mkdir fastqc_reports  #creating a folder called fastqc_reports to put the reports in one place
-  $ ~/softs/FastQC/fastqc SRR12705961_1.fastq.gz SRR12705961_1.fastq.gz ./fastqc_reports 
-  # It will take about 15mins to 30mins depending on the system. 
+  $ ~/softs/FastQC/fastqc SRR12705961_1.fastq.gz SRR12705961_1.fastq.gz ./fastqc_reports # It will take about 15mins to 30mins depending on the system. 
 
 
 C) Trim the RAW files using Trimmomatic
@@ -31,21 +30,33 @@ C) Trim the RAW files using Trimmomatic
 
 .. code-block:: console
 
- $ java -jar /Users/vinaykl/softs/Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 -threads 16 -trimlog 
-  JO_trim.log -summary JO_summary.txt  SRR12705961_1.fastq.gz SRR12705961_2.fastq.gz JO_R1_paired.fq.gz 
-  JO_R1_unpaired.fq.gz JO_R2_paired.fq.gz JO_R2_unpaired.fq.gz 
-  ILLUMINACLIP:/Users/vinaykl/softs/Trimmomatic-0.39/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 
-  TRAILING:3 MINLEN:36
+ $ java -jar /Users/vinaykl/softs/Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 -threads 16 -trimlog JO_trim.log -summary JO_summary.txt 
+   SRR12705961_1.fastq.gz SRR12705961_2.fastq.gz JO_R1_paired.fq.gz JO_R1_unpaired.fq.gz JO_R2_paired.fq.gz JO_R2_unpaired.fq.gz 
+   ILLUMINACLIP:/Users/vinaykl/softs/Trimmomatic-0.39/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
 
 D) Get the reference genome
 ---------------------------
 While the trimming is going on, let us get the reference genome - Athene cunicularia - from Ensemble
 
+I am creating a new folder named ``mapping`` under my ``PSMC_Tut`` directory. Having multiple direcotries helps you keep organised. 
+
 .. code-block:: console
+
+ $ mkdir mapping && cd mapping
 
  $ wget https://ftp.ensembl.org/pub/release-110/fasta/athene_cunicularia/dna/Athene_cunicularia.athCun1.dna.toplevel.fa.gz
  
  $ gunzip Athene_cunicularia.athCun1.dna.toplevel.fa.gz
+
+Your directory should look like this now
+
+vinaykl <\br>
+   |_____ PSMC_Tut <\br>
+             |______SRR12705961 <\br>
+             |          |_____fastqc_reports <\br>
+             |          |_____ Other Raw and Trimmed files <\br>
+             |
+             |______ Mapping <\br>
 
 E) Map the trimmed data to a reference - in our case to Athene cucnicularia
 ---------------------------------------------------------------------------
