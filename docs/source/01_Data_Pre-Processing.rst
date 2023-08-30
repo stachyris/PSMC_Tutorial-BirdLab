@@ -13,7 +13,7 @@ A) Check the QC of your RAW file
 -----------------------------
 
 .. code-block:: bash
-$ ~/softs/FastQC/fastqc SRR12705961_1.fastq.gz SRR12705961_1.fastq.gz ./fastqc_reports
+ ~/softs/FastQC/fastqc SRR12705961_1.fastq.gz SRR12705961_1.fastq.gz ./fastqc_reports
 
 
 B) Trim the RAW files using Trimmomatic
