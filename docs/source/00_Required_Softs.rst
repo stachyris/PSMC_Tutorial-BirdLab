@@ -43,6 +43,17 @@ You don't hae to get the htslib separately.
  $ make install
  $ export PATH="/your/soft/path/name/samtools-1.18/bin:$PATH"
 
+E) Picard Tools
+---------------
+
+.. code-block:: console
+
+  $ git clone https://github.com/broadinstitute/picard.git
+  $ cd picard
+  $ ./gradlew shadowJar
+
+
+
 
 
 
