@@ -111,3 +111,50 @@ Now we can start mapping
  /Users/vinaykl/PSMC_Tut/SRR12705961/JO_R2_paired.fq.gz \ 
  /Users/vinaykl/softs/samtools-1.18/bin/samtools view -bh - | \
  /Users/vinaykl/softs/samtools-1.18/bin/samtools sort -T tmp -o JO_map_athcun_ref.bam
+
+
+F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
+-----------------------------------------------------------------
+
+#filter based on quality filter
+
+.. code-block:: console
+
+  $ ~/softs/samtools-1.18/bin/samtools view \
+                   -bH \
+                   -F 4 \
+                   -q 30 \
+                   -o JO_filtered.bam \
+                   ./JO_map_athcun_ref.bam
+
+
+#sort the filtered bam
+
+.. code-block:: console
+
+  $ ~/softs/samtools-1.18/bin/samtools sort \
+                -o JO_filtered_sorted.bam \
+                -T JO_filtered_temp \
+                ./JO_filtered.bam
+
+
+#remove PCR Duplicates
+
+.. code-block:: console
+
+ $ java -jar -Xmx8g -jar ~/softs/picard/build/libs/picard.jar \
+     MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=900 \
+     INPUT=JO_filtered_sorted.bam \
+     OUTPUT=JO_filtered_sorted_rmdup.bam \
+     ASSUME_SORTED=TRUE \
+     REMOVE_DUPLICATES=true \
+     METRICS_FILE=JO.rmdup.metrix.txt \
+     TMP_DIR=./ \
+     VALIDATION_STRINGENCY=SILENT
+
+
+#Index the final bam
+
+.. code-block:: console
+
+ $ ~/softs/samtools-1.18/bin/samtools index JO_filtered_sorted_rmdup.bam
