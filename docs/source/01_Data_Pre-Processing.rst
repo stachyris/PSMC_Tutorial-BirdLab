@@ -32,6 +32,11 @@ B) Check the QC of your RAW file
   $ mkdir fastqc_reports  #creating a folder called fastqc_reports to put the reports in one place
   $ ~/softs/FastQC/fastqc SRR12705961_1.fastq.gz SRR12705961_1.fastq.gz ./fastqc_reports # It will take about 15mins to 30mins depending on the system. 
 
+.. note::
+ 
+ 1) Please go through the following document to understand what the each parameter represents and how you 
+ can interpret your results : https://dnacore.missouri.edu/PDF/FastQC_Manual.pdf
+
 
 C) Trim the RAW files using Trimmomatic
 ---------------------------------------
