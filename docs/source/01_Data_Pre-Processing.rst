@@ -13,7 +13,6 @@ A) Check the QC of your RAW file
 -----------------------------
 
 .. code-block:: bash
-
 $ ~/softs/FastQC/fastqc SRR12705961_1.fastq.gz SRR12705961_1.fastq.gz ./fastqc_reports
 
 
@@ -21,7 +20,6 @@ B) Trim the RAW files using Trimmomatic
 ---------------------------------------
 
 .. code-block:: bash
-
 $ java -jar /Users/vinaykl/softs/Trimmomatic-0.39/trimmomatic-0.39.jar PE -phred33 -trimlog JO_trim.log -summary JO_summary.txt  SRR12705961_1.fastq.gz SRR12705961_2.fastq.gz JO_R1_paired.fq.gz JO_R1_unpaired.fq.gz JO_R2_paired.fq.gz JO_R2_unpaired.fq.gz ILLUMINACLIP:Users/vinaykl/softs/Trimmomatic-0.39/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
 
 
