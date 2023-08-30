@@ -30,6 +30,20 @@ C) Burrows-Wheeler Aligner
  $ cd bwa; make
 
 
+D) Samtools and htslib suit
+----------------------------
+You don't hae to get the htslib separately. 
+
+.. code-block:: console
+
+ $ wget https://github.com/samtools/samtools/releases/download/1.18/samtools-1.18.tar.bz2
+ $ tar -xvzf samtools-1.18.tar.bz2 && cd samtools-1.18
+ $ ./configure --prefix=/your/soft/path/name/
+ $ make
+ $ make install
+ $ export PATH="/your/soft/path/name/samtools-1.18/bin:$PATH"
+
+
 
 
 
