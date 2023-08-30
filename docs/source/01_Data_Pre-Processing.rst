@@ -12,7 +12,7 @@ Download Data for Jungle Owlet from NCBI Cloud
 A) Check the QC of your RAW file
 -----------------------------
 
-.. code-block:: bash
+.. code-block:: console
  ~/softs/FastQC/fastqc SRR12705961_1.fastq.gz SRR12705961_1.fastq.gz ./fastqc_reports
 
 
