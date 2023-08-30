@@ -1,4 +1,4 @@
-Data pre-processing steps for PSMC using Jungle Owlet
+Data pre-processing steps for PSMC
 =====================================================
 
 .. note::
@@ -9,7 +9,7 @@ Data pre-processing steps for PSMC using Jungle Owlet
  4) And all of my packages are in /Users/vinaykl/softs
  5) Remove the ``$`` sign from all of your code, if you copy from here. It denotes the beginning of prompt
 
-A) Download Data for Jungle Owlet from NCBI Cloud 
+A) Download Data for Jungle Owlet
 ----------------------------------------------
 
 .. note::
@@ -18,6 +18,11 @@ A) Download Data for Jungle Owlet from NCBI Cloud
      people can download from there
   2. These files are slightly larger - try and see if you can have a free space of about 100GB for the 
      entire excercise
+
+.. code-block:: console
+
+ READ1 : https://drive.google.com/file/d/1ENCTT4BJmZv2tM7Co6SfGOO4_RzOusxU/view?usp=sharing
+ READ2 : https://drive.google.com/file/d/1BlcXiAotbHYDHmhhH8-HUcosccb48-53/view?usp=sharing
 
 B) Check the QC of your RAW file
 -----------------------------
