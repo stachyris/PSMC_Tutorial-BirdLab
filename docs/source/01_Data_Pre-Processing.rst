@@ -22,7 +22,8 @@ B) Check the QC of your RAW file
 .. code-block:: console
   
   $ mkdir fastqc_reports  #creating a folder called fastqc_reports to put the reports in one place
-  $ ~/softs/FastQC/fastqc SRR12705961_1.fastq.gz SRR12705961_1.fastq.gz ./fastqc_reports # 
+  $ ~/softs/FastQC/fastqc SRR12705961_1.fastq.gz SRR12705961_1.fastq.gz ./fastqc_reports 
+  # It will take about 15mins to 30mins depending on the system. 
 
 
 C) Trim the RAW files using Trimmomatic
