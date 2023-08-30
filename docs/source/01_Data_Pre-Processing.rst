@@ -92,7 +92,7 @@ Lets download the assembled genome in fasta file now
          └── Athene_cunicularia.athCun1.dna.toplevel.fa
 
 
-E) Map the trimmed data to a reference - in our case to Athene cucnicularia
+E) Map the trimmed data to a reference
 ---------------------------------------------------------------------------
 Before we start mapping the data, we need to ``index`` the reference. 
 
