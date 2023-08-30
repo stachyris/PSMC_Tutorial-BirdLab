@@ -4,7 +4,7 @@ Data pre-processing steps for PSMC using Jungle Owlet
 Download Data for Jungle Owlet from NCBI Cloud 
 ----------------------------------------------
 
-Please note : \
+.. note::
 1) The direct FTP server are no longer active - for the ease of it, I have uploaded to GDrive and you people can download from there. \ 
 2) Make sure all of the softwares are in your $PATH. \
 3) These files are slightly larger - try and see if you can have a space about 100GB. \
