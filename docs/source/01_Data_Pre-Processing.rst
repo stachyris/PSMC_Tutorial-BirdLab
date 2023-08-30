@@ -47,32 +47,43 @@ I am creating a new folder named ``mapping`` under my ``PSMC_Tut`` directory. Ha
 
  $ mkdir mapping && cd mapping
 
- $ wget https://ftp.ensembl.org/pub/release-110/fasta/athene_cunicularia/dna/Athene_cunicularia.athCun1.dna.toplevel.fa.gz
- 
- $ gunzip Athene_cunicularia.athCun1.dna.toplevel.fa.gz
-
 Your directory should look like this now
-
-.. code-block:: concole
 
 .. code-block:: console
 
- ├──SRR12705961
- │   ├── JO_R1_paired.fq.gz
- │   ├── JO_R1_unpaired.fq.gz
- │   ├── JO_R2_paired.fq.gz
- │   ├── JO_R2_unpaired.fq.gz
- │   ├── JO_summary.txt
- │   ├── JO_trim.log
- │   ├── SRR12705961_1.fastq.gz
- │   ├── SRR12705961_2.fastq.gz
- │   └── fastqc_reports
- │       ├── SRR12705961_1_fastqc.html
- │       ├── SRR12705961_1_fastqc.zip
- │       ├── SRR12705961_2_fastqc.html
- │       └── SRR12705961_2_fastqc.zip
- └── mapping
-     └── Athene_cunicularia.athCun1.dna.toplevel.fa
+  ├──SRR12705961
+  │   ├── JO_R1_paired.fq.gz
+  │   ├── JO_R1_unpaired.fq.gz
+  │   ├── JO_R2_paired.fq.gz
+  │   ├── JO_R2_unpaired.fq.gz
+  │   ├── JO_summary.txt
+  │   ├── JO_trim.log
+  │   ├── SRR12705961_1.fastq.gz
+  │   ├── SRR12705961_2.fastq.gz
+  │   └── fastqc_reports
+  │       ├── SRR12705961_1_fastqc.html
+  │       ├── SRR12705961_1_fastqc.zip
+  │       ├── SRR12705961_2_fastqc.html
+  │       └── SRR12705961_2_fastqc.zip
+  └── mapping
+
+ 
+Lets download the assembled genome in fasta file now
+
+.. code-block:: console
+
+ $ wget https://ftp.ensembl.org/pub/release- 110/fasta/athene_cunicularia/dna/Athene_cunicularia.athCun1.dna.toplevel.fa.gz
+ $ gunzip Athene_cunicularia.athCun1.dna.toplevel.fa.gz
+
+
+.. code-block:: concole
+  
+  |
+  |
+  |
+  |
+  └── mapping
+         └── Athene_cunicularia.athCun1.dna.toplevel.fa
 
 
 E) Map the trimmed data to a reference - in our case to Athene cucnicularia
