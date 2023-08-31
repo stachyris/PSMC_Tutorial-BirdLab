@@ -142,10 +142,15 @@ F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
 
 #filter based on quality filter
 
+.. note::
+
+ You could run all the following steps as one by combining them under the same script. But for the intial stage and understanding each step I would 
+ recommend all of you to run them by step by step. Plus, easy to troubleshoot if something doesn't work - for whatever reason. 
+
 .. code-block:: console
 
   $ ~/softs/samtools-1.18/bin/samtools view \
-                   -bH \
+                   -bh \
                    -F 4 \
                    -q 30 \
                    -o JO_filtered.bam \
