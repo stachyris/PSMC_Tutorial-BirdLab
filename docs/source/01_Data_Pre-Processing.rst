@@ -16,7 +16,7 @@ A) Download Data for Jungle Owlet
 
   1. The direct FTP server are no longer active - for the ease of it, I have uploaded to GDrive and you 
      people can download from there
-  2. These files are slightly larger - try and see if you can have a free space of about 100GB for the 
+  2. These files are slightly larger - try and see if you can have a free space of about 150-200GB for the 
      entire excercise
 
 .. code-block:: console
