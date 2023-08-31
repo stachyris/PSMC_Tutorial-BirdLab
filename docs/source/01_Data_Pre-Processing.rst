@@ -118,7 +118,6 @@ Before we start mapping the data, we need to ``index`` the reference.
 
 Now we can start mapping
 
-
 .. code-block:: bash
 
  $ bwa mem -M -t 16 -R "@RG\tID:JO_30x\tSM:JO_\tLB:IlluminaWGS\tPL:ILLUMINA" \ 
@@ -127,6 +126,12 @@ Now we can start mapping
  /Users/vinaykl/PSMC_Tut/SRR12705961/JO_R2_paired.fq.gz \ 
  /Users/vinaykl/softs/samtools-1.18/bin/samtools view -bh - | \
  /Users/vinaykl/softs/samtools-1.18/bin/samtools sort -T tmp -o JO_map_athcun_ref.bam
+
+
+.. note::
+
+ This took about 6 hours 28 minutes on my M2 Mac with 8 cores and 24GB RAM. Potentially it *WILL* take 
+ long time when you run do it. Could run for days. So plan accordingly
 
 
 F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
