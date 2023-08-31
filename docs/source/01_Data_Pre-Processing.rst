@@ -102,8 +102,8 @@ E) Map the trimmed data to a reference
 
 .. note::
  
- * At this point you can consider deleting some of the files from trimming ~ ``SRR12705961_1.fastq.gz`` 
-  ``SRR12705961_2.fastq.gz`` files and Trim log files ``.log``. This would account upto ~50GB. 
+ At this point you can consider deleting some of the files from trimming ~ 
+ ``SRR12705961_1.fastq.gz``,``SRR12705961_2.fastq.gz`` ``.log``. This would account upto ~50GB. 
 
 .. warning::
 
