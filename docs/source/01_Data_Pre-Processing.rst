@@ -40,7 +40,10 @@ B) Check the QC of your RAW file
 
 C) Trim the RAW files using Trimmomatic
 ---------------------------------------
-It took about 2h 20m on my Mac with 24GB RAM and 8 cores
+
+.. note::
+ 
+ It took about 2h 20m on my Mac with 24GB RAM and 8 cores
 
 .. code-block:: console
 
