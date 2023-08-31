@@ -147,6 +147,12 @@ F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
  You could run all the following steps as one by combining them under the same script. But for the intial stage and understanding each step I would 
  recommend all of you to run them step by step. Plus, easy to troubleshoot if something doesn't work - for whatever reason. 
 
+
+.. warning::
+
+  When I ran steps by steps it took about three hours - an hour for each step. Again, remember I have run 
+  these on a M2 Mac with 8 cores and 24GB RAM. It may vary for you based on your machine capability. 
+
 .. code-block:: console
 
   $ ~/softs/samtools-1.18/bin/samtools view \
@@ -187,11 +193,4 @@ F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
 .. code-block:: console
 
  $ ~/softs/samtools-1.18/bin/samtools index JO_filtered_sorted_rmdup.bam
-
-
-.. note::
-
- When I ran steps by steps it took about three hours - an hour for each step. Again, remember I have run 
- these on a M2 Mac with 8 cores and 24GB RAM. It may vary for you based on your machine capability. 
-
 
