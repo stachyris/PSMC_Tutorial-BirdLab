@@ -131,7 +131,7 @@ Now we can start mapping
 .. note::
 
  This took about 6 hours 28 minutes on my M2 Mac with 8 cores and 24GB RAM. Potentially it *WILL* take 
- long time when you run do it. Could run for days. So plan accordingly
+ long time when you do it on your system. Could run for days. So plan accordingly. 
 
 
 F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
