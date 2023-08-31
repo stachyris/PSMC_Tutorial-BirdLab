@@ -171,7 +171,7 @@ F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
 
 .. code-block:: console
 
- $ java -jar -Xmx8g -jar ~/softs/picard/build/libs/picard.jar \
+ $ java -jar -Xmx8g -jar ~/softs/picard/build/libs/picard.jar MarkDuplicates \
      MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=900 \
      INPUT=JO_filtered_sorted.bam \
      OUTPUT=JO_filtered_sorted_rmdup.bam \
