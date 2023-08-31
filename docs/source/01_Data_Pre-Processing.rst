@@ -145,7 +145,7 @@ F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
 .. note::
 
  You could run all the following steps as one by combining them under the same script. But for the intial stage and understanding each step I would 
- recommend all of you to run them by step by step. Plus, easy to troubleshoot if something doesn't work - for whatever reason. 
+ recommend all of you to run them step by step. Plus, easy to troubleshoot if something doesn't work - for whatever reason. 
 
 .. code-block:: console
 
