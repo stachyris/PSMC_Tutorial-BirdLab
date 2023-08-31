@@ -99,6 +99,17 @@ Lets download the assembled genome in fasta file now
 
 E) Map the trimmed data to a reference
 ---------------------------------------------------------------------------
+
+.. note::
+ 
+ * At this point you can consider deleting some of the files from trimming ~ ``SRR12705961_1.fastq.gz`` 
+ ``SRR12705961_2.fastq.gz`` files and Trim log files ``.log``. This would account upto ~50GB. 
+
+.. warning::
+
+  * This is not advisable when you are working with your own data or on a project. 
+ 
+
 Before we start mapping the data, we need to ``index`` the reference. 
 
 .. code-block:: console
