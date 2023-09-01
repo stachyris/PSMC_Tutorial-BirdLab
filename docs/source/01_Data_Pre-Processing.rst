@@ -194,3 +194,16 @@ F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
 
  $ ~/softs/samtools-1.18/bin/samtools index JO_filtered_sorted_rmdup.bam
 
+---------------------------------------------------------------------------
+
+We need to do the QC, But will update that in few hours - Issue with JAVA
+
+--------------------------------------------------------------------------
+
+So for the next step, we need something called 'sequence report' which ideally we should've downloaded along with the reference genome - but I forgot, so lets download that now. 
+
+.. code-block:: console
+
+ curl -OJX GET "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_003259725.1/download?include_annotation_type=SEQUENCE_REPORT&filename=GCF_003259725.1.zip" -H "Accept: application/zip"
+
+
