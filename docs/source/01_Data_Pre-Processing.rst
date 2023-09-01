@@ -92,11 +92,11 @@ Lets download the assembled genome in fasta file now
 
 .. code-block:: concole
   
-  |
-  |
-  |
-  |
-  └── mapping
+   |
+   |
+   |
+   |
+   └── mapping
          └── Athene_cunicularia.athCun1.dna.toplevel.fa
 
 
