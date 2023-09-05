@@ -300,8 +300,14 @@ H) Creating consensus fq file
 
 .. code-block::
 
- /usr/local/bin/bin/bcftools mpileup -C50 -f ~/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa ./JO_filtered_sorted_rmdup_aut.bam | /usr/local/bin/bin/bcftools call -c - | /usr/local/bin/bin/vcfutils.pl vcf2fq -d 10 -D 100 | gzip > JO_diploid.fq.gz
+ $ /usr/local/bin/bin/bcftools mpileup -C50 -f ~/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa ./JO_filtered_sorted_rmdup_aut.bam | /usr/local/bin/bin/bcftools call -c - | /usr/local/bin/bin/vcfutils.pl vcf2fq -d 10 -D 100 | gzip > JO_diploid.fq.gz
 
+.. note::
+
+ I am not entirely sure how long it would take - different duraton when I ran everytime. But better to 
+ keep it for running on the prompt/as a ``nohup`` process for days. It will seem like it isn't generating 
+ any output i.e empty ``JO_diploid.fq.gz`` file. But trust me it would be working in the background. In 
+ case it isn't working and for some reason you think it isn't working hit me up. Let's have a chat. 
 
 
 
