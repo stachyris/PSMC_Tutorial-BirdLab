@@ -224,33 +224,81 @@ H) Identifying sex linked chromosome
 Sex chromosomes have a huge influence on the overall demographic curve - so we will identify them now. This is where the 'Sequence report' come into help - which has scaffolds/chromosome information regarding sex chromosomes and autosomes. 
 
 
- .. note::
-
+.. note::
+ 
  This code will not work on all the files. This is tailor made for this particular sequence report 
  downloaded. So, just do not blindly copy and paste when you are working on your data. It will produce 
  blank files. 
 
 .. code-block:: console
 
- #Let's get the length of each scaffold of the reference file
+ #Lets get the length of each scaffold of the reference file
  $ ~/soft/bioawk -c fastx '{print ">" $name ORS length($seq)}' ~/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa | paste - - > length_of_each_scaffold_of_ath_cun_ensembl.txt
  
- # Now let's isolate the Z Chromosome scaffolds in to a text file
- less ./GCA_003259725.1_sequence_report.txt| grep 'Chromosome' | grep 'chrZ' > chromosome_scaffolds_Z.txt
+ # Now lets isolate the Z Chromosome scaffolds in to a text file
+ $ less ./GCA_003259725.1_sequence_report.txt| grep 'Chromosome' | grep 'chrZ' > chromosome_scaffolds_Z.txt
 
- # Now let's isolate the Autosomal Chromosome scaffolds in to a text file
-  less ./GCA_003259725.1_sequence_report.txt| grep 'Chromosome' | grep -v 'chrZ' > chromosome_scaffolds_aut.txt 
+ # Now lets isolate the Autosomal Chromosome scaffolds in to a text file
+  $ less ./GCA_003259725.1_sequence_report.txt| grep 'Chromosome' | grep -v 'chrZ' > chromosome_scaffolds_aut.txt 
 
  # For downstream analysis we need to bed files. Please learn more about bed formats
  
- cut -f1 chromosome_scaffolds_Z.txt | grep -f - length_of_each_scaffold_of_ath_cun_ensembl.txt | sed 
- 's,>,,' | sed 's,\.1,\.1\t0,' > chromosome_scaffolds_Z.bed
+ $ cut -f1 chromosome_scaffolds_Z.txt | grep -f - length_of_each_scaffold_of_ath_cun_ensembl.txt | sed 's,>,,' | sed 's,\.1,\.1\t0,' > chromosome_scaffolds_Z.bed
 
- cut -f1 chromosome_scaffolds_aut.txt | grep -f - length_of_each_scaffold_of_ath_cun_ensembl.txt | sed 's,>,,' | sed 's,\.1,\.1\t0,' > chromosome_scaffolds_aut.bed
+ $ cut -f1 chromosome_scaffolds_aut.txt | grep -f - length_of_each_scaffold_of_ath_cun_ensembl.txt | sed 's,>,,' | sed 's,\.1,\.1\t0,' > chromosome_scaffolds_aut.bed
 
+---------------------------------------------------------------------------------
+
+Now your mapping directory should look like this :
+
+.. code-block:: console
+
+ ├── Athene_cunicularia.athCun1.dna.toplevel.fa
+ ├── Athene_cunicularia.athCun1.dna.toplevel.fa.amb
+ ├── Athene_cunicularia.athCun1.dna.toplevel.fa.ann
+ ├── Athene_cunicularia.athCun1.dna.toplevel.fa.bwt
+ ├── Athene_cunicularia.athCun1.dna.toplevel.fa.fai
+ ├── Athene_cunicularia.athCun1.dna.toplevel.fa.pac
+ ├── Athene_cunicularia.athCun1.dna.toplevel.fa.sa
+ ├── GCA_003259725.1_sequence_report.txt
+ ├── JO.rmdup.metrix.txt
+ ├── JO_filtered.bam
+ ├── JO_filtered_sorted.bam
+ ├── JO_filtered_sorted_rmdup.bam
+ ├── JO_filtered_sorted_rmdup.bam.bai
+ ├── JO_map_athcun_ref.bam
+ ├── chromosome_scaffolds_Z.bed
+ ├── chromosome_scaffolds_Z.txt
+ ├── chromosome_scaffolds_aut.bed
+ ├── chromosome_scaffolds_aut.txt
+ └── length_of_each_scaffold_of_ath_cun_ensembl.txt
  
 
+G) Retain data mapping only to Autosomal chromosomes from the reference.
+
+--------------------------------------------------------------------------
+
+I like to keep things neat, so I am moving out of ``mapping`` directory and creating a new directory called ``PSMC`` under ``PSMC_Tut``. We will process further steps in ``PSMC`` folder. 
+
+.. code-block::
+
+ $ mkdir PSMC
  
+ $ cd PSMC
+
+ Now lets remove the sex chromosomes and retain only autosomes
+
+ $ ~/softs/samtools-1.18/bin/samtools view -b -L ../mapping/chromosome_scaffolds_aut.bed ../mapping/JO_filtered_sorted_rmdup.bam > JO_filtered_sorted_rmdup_aut.bam
+
+.. note::
+
+ This took about 45 minutes. 
+
+
+H) Creating consensus fq file 
+------------------------------
+
+ /usr/local/bin/bin/bcftools mpileup -C50 -f ~/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa ./JO_filtered_sorted_rmdup_aut.bam | /usr/local/bin/bin/bcftools call -c - | /usr/local/bin/bin/vcfutils.pl vcf2fq -d 10 -D 100 | gzip > JO_diploid.fq.gz
 
 
 
