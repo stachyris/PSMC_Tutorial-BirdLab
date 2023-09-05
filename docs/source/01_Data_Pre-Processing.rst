@@ -298,6 +298,8 @@ I like to keep things neat, so I am moving out of ``mapping`` directory and crea
 H) Creating consensus fq file 
 ------------------------------
 
+.. code-block::
+
  /usr/local/bin/bin/bcftools mpileup -C50 -f ~/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa ./JO_filtered_sorted_rmdup_aut.bam | /usr/local/bin/bin/bcftools call -c - | /usr/local/bin/bin/vcfutils.pl vcf2fq -d 10 -D 100 | gzip > JO_diploid.fq.gz
 
 
