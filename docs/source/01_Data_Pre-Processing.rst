@@ -223,11 +223,33 @@ H) Identifying sex linked chromosome
 
 Sex chromosomes have a huge influence on the overall demographic curve - so we will identify them now. This is where the 'Sequence report' come into help - which has scaffolds/chromosome information regarding sex chromosomes and autosomes. 
 
+
+ .. note::
+
+ This code will not work on all the files. This is tailor made for this particular sequence report 
+ downloaded. So, just do not blindly copy and paste when you are working on your data. It will produce 
+ blank files. 
+
 .. code-block:: console
 
  #Let's get the length of each scaffold of the reference file
- $ ~/soft/bioawk -c fastx '{print ">" $name ORS length($seq)}' ~/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa
-less ./GCA_003259725.1_sequence_report.txt| grep 'Chromosome' | grep 'chrZ' > chromosome_scaffolds_Z.txt
+ $ ~/soft/bioawk -c fastx '{print ">" $name ORS length($seq)}' ~/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa | paste - - > length_of_each_scaffold_of_ath_cun_ensembl.txt
+ 
+ # Now let's isolate the Z Chromosome scaffolds in to a text file
+ less ./GCA_003259725.1_sequence_report.txt| grep 'Chromosome' | grep 'chrZ' > chromosome_scaffolds_Z.txt
+
+ # Now let's isolate the Autosomal Chromosome scaffolds in to a text file
+  less ./GCA_003259725.1_sequence_report.txt| grep 'Chromosome' | grep -v 'chrZ' > chromosome_scaffolds_aut.txt 
+
+ # For downstream analysis we need to bed files. Please learn more about bed formats
+ 
+ cut -f1 chromosome_scaffolds_Z.txt | grep -f - length_of_each_scaffold_of_ath_cun_ensembl.txt | sed 
+ 's,>,,' | sed 's,\.1,\.1\t0,' > chromosome_scaffolds_Z.bed
+
+ cut -f1 chromosome_scaffolds_aut.txt | grep -f - length_of_each_scaffold_of_ath_cun_ensembl.txt | sed 's,>,,' | sed 's,\.1,\.1\t0,' > chromosome_scaffolds_aut.bed
+
+ 
+
  
 
 
