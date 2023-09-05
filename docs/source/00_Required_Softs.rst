@@ -1,7 +1,7 @@
 Installation of required softwares
 ==================================
 
-A) FastQC
+1) FastQC
 -----------
 
 Find the appropriate version comaptible for your operating system from here
@@ -12,7 +12,7 @@ Find the appropriate version comaptible for your operating system from here
  $ unzip fastqc_v0.12.1.zip
 
 
-B) Trimmomatic
+2) Trimmomatic
 ---------------
 
 .. code-block:: console
@@ -21,7 +21,7 @@ B) Trimmomatic
  $ unzip Trimmomatic-0.39.zip
 
 
-C) Burrows-Wheeler Aligner
+3) Burrows-Wheeler Aligner
 --------------------------
 
 .. code-block:: console
@@ -30,7 +30,7 @@ C) Burrows-Wheeler Aligner
  $ cd bwa; make
 
 
-D) Samtools and htslib suit
+4) Samtools and htslib suit
 ----------------------------
 You don't hae to get the htslib separately. 
 
@@ -43,7 +43,7 @@ You don't hae to get the htslib separately.
  $ make install
  $ export PATH="/your/soft/path/name/samtools-1.18/bin:$PATH"
 
-E) Picard Tools
+5) Picard Tools
 ---------------
 
 .. code-block:: console
@@ -52,7 +52,7 @@ E) Picard Tools
   $ cd picard
   $ ./gradlew shadowJar
 
-F) Bioawk
+6) Bioawk
 ----------
 
 .. code-block:: console
@@ -61,6 +61,18 @@ F) Bioawk
  $ cd bioawk/
  $ sudo make
  $ ./bioawk
+
+7) BCFTools
+--------------
+
+.. code-block:: console
+
+ $ wget https://github.com/samtools/bcftools/releases/download/1.10.2/bcftools-1.10.2.tar.bz2
+ $ tar -xjvf bcftools-1.10.2.tar.bz2
+ $ cd bcftools-1.10.2
+ $ make
+ $ sudo make prefix=/usr/local/bin install
+ $ sudo ln -s /usr/local/bin/bin/bcftools /usr/bin/bcftools # you don't technically need to do this. And if you aren't a root user you may get a ``permission denied`` message - don't worry about it. 
 
 
 
