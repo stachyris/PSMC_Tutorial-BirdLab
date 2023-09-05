@@ -194,16 +194,42 @@ F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
 
  $ ~/softs/samtools-1.18/bin/samtools index JO_filtered_sorted_rmdup.bam
 
----------------------------------------------------------------------------
 
-We need to do the QC, But will update that in few hours - Issue with JAVA
+G) BAMQC
 
 --------------------------------------------------------------------------
 
-So for the next step, we need something called 'sequence report' which ideally we should've downloaded along with the reference genome - but I forgot, so lets download that now. 
+We need to do the QC, But will update that in few hours - Issue with JAVA 
+
+.. warning:: 
+
+ We will skip for the time-being. Idea behind running a bamqc is that Nadachowska-Brzyska K et., al 2016 papers shows that we need at least 17x of average coverage to infer demography history with confidence. 
+Since, we now have two papers with this data we know that it's 24x average depth. QC softwares like ``Qualimap`` gives us this number.   
+
+
+So for the next step, we need something called 'sequence report' which ideally we should've downloaded along with the reference genome - but I forgot, so lets download that now and copy it into the ``mapping`` folder under ``PSMC_tut`` directory. (I have uploaded that to same GDrive folder now)
+
+.. note:: 
+
+ Basically every refernce genome you download from a public repository like ``NCBI-SRA`` or ``ENA`` or ``Ensmble`` it will have a accompanying text file with chromosome and other sequence information. 
 
 .. code-block:: console
 
- curl -OJX GET "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_003259725.1/download?include_annotation_type=SEQUENCE_REPORT&filename=GCF_003259725.1.zip" -H "Accept: application/zip"
+ https://drive.google.com/file/d/1NGa5Gw6ROHSzRfqJUpfh54gUJTFGkG3F/view?usp=sharing
+
+H) Identifying sex linked chromosome
+
+---------------------------------------------------------------------------
+
+Sex chromosomes have a huge influence on the overall demographic curve - so we will identify them now. This is where the 'Sequence report' come into help - which has scaffolds/chromosome information regarding sex chromosomes and autosomes. 
+
+.. code-block:: console
+
+ #Let's get the length of each scaffold of the reference file
+ $ ~/soft/bioawk -c fastx '{print ">" $name ORS length($seq)}' ~/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa
+less ./GCA_003259725.1_sequence_report.txt| grep 'Chromosome' | grep 'chrZ' > chromosome_scaffolds_Z.txt
+ 
+
+
 
 
