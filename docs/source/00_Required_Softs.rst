@@ -52,6 +52,15 @@ E) Picard Tools
   $ cd picard
   $ ./gradlew shadowJar
 
+F) Bioawk
+----------
+
+.. code-block:: console
+
+ $ sudo git clone https://github.com/lh3/bioawk.git
+ $ cd bioawk/
+ $ sudo make
+ $ ./bioawk
 
 
 
