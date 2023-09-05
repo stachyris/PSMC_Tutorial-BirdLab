@@ -75,6 +75,18 @@ You don't hae to get the htslib separately.
  $ sudo ln -s /usr/local/bin/bin/bcftools /usr/bin/bcftools # you don't technically need to do this. And if you aren't a root user you may get a ``permission denied`` message - don't worry about it. 
 
 
+8) PSMC
+--------
+
+.. code-block:: console
+
+ $ git clone https://github.com/lh3/psmc.git
+ $ cd psmc
+ $ make
+ $ cd utils
+ $ make
+
+
 
 
 
