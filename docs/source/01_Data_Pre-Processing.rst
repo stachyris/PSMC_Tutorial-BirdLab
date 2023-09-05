@@ -305,7 +305,7 @@ H) Creating consensus fq file
 .. note::
 
  I am not entirely sure how long it would take - different duraton when I ran everytime. But better to 
- keep it for running on the prompt/as a ``nohup`` process for days. It will seem like it isn't generating 
+ keep it for running on the prompt/as a ``nohup`` process. It will seem like it isn't generating 
  any output i.e empty ``JO_diploid.fq.gz`` file. But trust me it would be working in the background. In 
  case it isn't working and for some reason you think it isn't working hit me up. Let's have a chat. 
 
