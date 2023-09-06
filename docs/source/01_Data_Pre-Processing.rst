@@ -311,7 +311,7 @@ H) Creating consensus fq file
 
 .. update::
 
- It didn't take much for past few times times. So I am placing this process to be done within 5 hours. 
+ It didn't take much past few times. So I am placing this process to be done within 5 hours. 
 
 
 
