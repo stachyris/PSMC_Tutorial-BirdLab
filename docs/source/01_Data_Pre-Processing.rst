@@ -309,5 +309,9 @@ H) Creating consensus fq file
  any output i.e empty ``JO_diploid.fq.gz`` file. But trust me it would be working in the background. In 
  case it isn't working and for some reason you think it isn't working hit me up. Let's have a chat. 
 
+.. update::
+
+ It didn't take much for past few times times. So I am placing this process to be done within 5 hours. 
+
 
 
