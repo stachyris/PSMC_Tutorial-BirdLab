@@ -1,4 +1,4 @@
-A) Alright, Let's run the actual things - PSMC
+Alright, Let's run the actual things - PSMC
 -----------------------------------------------
 
 .. note::
