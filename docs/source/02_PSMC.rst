@@ -53,11 +53,29 @@ A) Initial runs
 B) Bootstrapping PSMC
 ----------------------
 
+Now to keep things clean let's make a new directory named ``boots`` and run all the bootstrapping files and outputs. 
+
 .. code-block:: console
 
- ~/softs/psmc/utils/splitfa ../JO_diploid.psmcfa > JO_diploid_split.psmcfa
+ $ mkdir boots
+ $ cd boots
 
- ~/softs/psmc/psmc -N25 -t9 -r5 -p "26*2+4+7+1" -o JO_diploid.psmc ../JO_diploid.psmcfa
+Your overall directory structure should look like this now
+
+.. code-block:: console
+
+ ├── PSMC
+ │   └── boots
+ ├── SRR12705961
+ │   └── fastqc_reports
+ └── mapping
+    
+
+.. code-block:: console
+
+ $ ~/softs/psmc/utils/splitfa ../JO_diploid.psmcfa > JO_diploid_split.psmcfa
+
+ $ ~/softs/psmc/psmc -N25 -t9 -r5 -p "26*2+4+7+1" -o JO_diploid.psmc ../JO_diploid.psmcfa
 
 
 .. attention::
@@ -74,19 +92,19 @@ B) Bootstrapping PSMC
 .. code-block:: console
  
  # For Mac
- seq 100 | xargs -I{} -n 1 -P 8 echo ~/softs/psmc/psmc -N25 -t9 -r5 -b -p "26*2+4+7+1" -o JO_diploid_round-{}.psmc JO_diploid_split.psmcfa | sh
+ $ seq 100 | xargs -I{} -n 1 -P 8 echo ~/softs/psmc/psmc -N25 -t9 -r5 -b -p "26*2+4+7+1" -o JO_diploid_round-{}.psmc JO_diploid_split.psmcfa | sh
 
 
 .. code-block:: console 
 
  # For Linux/WSL
 
- seq 100 | xargs -i -n 1 -P 8 echo ~/softs/psmc/psmc -N25 -t9 -r5 -b -p "26*2+4+7+1" -o JO_diploid_round-{}.psmc JO_diploid_split.psmcfa | sh
+ $ seq 100 | xargs -i -n 1 -P 8 echo ~/softs/psmc/psmc -N25 -t9 -r5 -b -p "26*2+4+7+1" -o JO_diploid_round-{}.psmc JO_diploid_split.psmcfa | sh
 
 
 .. code-block:: console 
  
- cat ../JO_diploid.psmc JO_diploid_round-*.psmc > JO_diploid_combined.psmc
+ $ cat ../JO_diploid.psmc JO_diploid_round-*.psmc > JO_diploid_combined.psmc
  
 
                                                                         
