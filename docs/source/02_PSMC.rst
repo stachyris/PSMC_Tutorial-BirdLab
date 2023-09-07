@@ -7,6 +7,7 @@ Alright, Let's run the actual things - PSMC
 
 
 A) Initial runs
+----------------
 
 .. code-block:: console
 
@@ -33,6 +34,7 @@ A) Initial runs
 
 
 B) Bootstrapping PSMC
+----------------------
 
 .. code-block:: console
 
