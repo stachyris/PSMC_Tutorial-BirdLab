@@ -60,12 +60,16 @@ B) Bootstrapping PSMC
  ~/softs/psmc/psmc -N25 -t9 -r5 -p "26*2+4+7+1" -o JO_diploid.psmc ../JO_diploid.psmcfa
 
 
-Next step - where its actually bootstrapping- code is slightly different for Mac and Linux, So accordingly choose the code chunk. 
+.. attention::
+
+ Next step - where its actually bootstrapping- code is slightly different for Mac and Linux, So 
+ accordingly choose the code chunk. 
 
 .. note::
 
  Sadly, I haven't figured out how to run these parallelly, so it will run on single core. It took about 
  ~25 minutes for each iterations, so it may run upto 40h-42h. 
+
 
 .. code-block:: console
  
