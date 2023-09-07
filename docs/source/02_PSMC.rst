@@ -40,9 +40,12 @@ A) Initial runs
  open). In our case the number of recombinations is higher than recommended 10 as this is already 
  optimised parameter. 
 
- If it is not above ``10``, go back to your PSMC script and change ``-t`` and ``-p``. One way is to tackle 
+ If it is not above ``10``, go back to your PSMC script and change ``-t`` and ``-p``. One way to tackle 
  this is to keep the ``-p`` constant and change ``-t`` and check - but this may result in the ``PSMC`` 
- result not going back in time you desired. 
+ result not going back in time you desired. But eventually you will have to play with ``-p``. 
+ 
+ ....I will try and see if I can put up my previous combinations and trials somewhere so that you people 
+ can get idea....
 
 .. code-block:: console
 
