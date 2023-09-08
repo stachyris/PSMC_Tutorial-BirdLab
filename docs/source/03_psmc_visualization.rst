@@ -1,14 +1,17 @@
 .. code-block:: r
 
- library("ggpubr") #this is the R library we gonna be using
+ #this is the R library we gonna be using
+ library("ggpubr") 
 
 .. code-block:: r
 
- setwd("/Users/vinaykl/PSMC_Tut/PSMC/visualization") #this is the directory of the files where all the PSMC outputs are saved. 
+ #this is the directory of the files where all the PSMC outputs are saved.
+ setwd("/Users/vinaykl/PSMC_Tut/PSMC/visualization")  
 
 .. code-block:: r
 
- op <- par(family = "serif") #select a font for your plots
+ #select a font for your plots
+ op <- par(family = "serif") 
 
 .. code-block:: r
 
