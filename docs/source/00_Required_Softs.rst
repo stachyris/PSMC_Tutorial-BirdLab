@@ -86,6 +86,14 @@ You don't hae to get the htslib separately.
  $ cd utils
  $ make
 
+9) R and R-Studio
+-----------------
+
+Download ``R`` first - For Mac : https://cran.r-project.org/bin/macosx/
+                   For Windows : https://cran.r-project.org/bin/windows/base/
+ 
+Now Download ``R-Studio``. R-Studio is an IDE which helps you access R interactively. Alternatively you can use any other IDE like VS Code. 
+Download the ``R-Studio`` - https://posit.co/download/rstudio-desktop/
 
 
 
