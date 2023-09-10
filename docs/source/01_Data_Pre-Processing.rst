@@ -1,3 +1,7 @@
+.. note::
+
+ Duration of the steps mentioned  in the following steps are for the full dataset, below links foir downloading data now points to reduced datset. So, time duration should be much lesser.  
+
 Data pre-processing steps for PSMC
 =====================================================
 
@@ -21,8 +25,8 @@ A) Download Data for Jungle Owlet
 
 .. code-block:: console
 
- READ1 : https://drive.google.com/file/d/1ENCTT4BJmZv2tM7Co6SfGOO4_RzOusxU/view?usp=sharing
- READ2 : https://drive.google.com/file/d/1BlcXiAotbHYDHmhhH8-HUcosccb48-53/view?usp=sharing
+ READ1 : https://drive.google.com/file/d/1pnoPRcZJL7PHSb1EdGa1E_oGEFUahmuu/view?usp=sharing
+ READ2 : https://drive.google.com/file/d/1fKQHmb0AAlWdZuZcKaCjNPq9LIUbFdpO/view?usp=sharing
 
 B) Check the QC of your RAW file
 -----------------------------
