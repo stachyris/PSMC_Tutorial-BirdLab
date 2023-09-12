@@ -200,7 +200,6 @@ F) Filter the mapped data (Quality, Sort, PCR Duplicates removal)
 
 
 G) BAMQC
-
 --------------------------------------------------------------------------
 
 We need to do the QC, But will update that in few hours - Issue with JAVA 
@@ -222,7 +221,6 @@ So for the next step, we need something called 'sequence report' which ideally w
  https://drive.google.com/file/d/1NGa5Gw6ROHSzRfqJUpfh54gUJTFGkG3F/view?usp=sharing
 
 H) Identifying sex linked chromosome
-
 ---------------------------------------------------------------------------
 
 Sex chromosomes have a huge influence on the overall demographic curve - so we will identify them now. This is where the 'Sequence report' come into help - which has scaffolds/chromosome information regarding sex chromosomes and autosomes. 
@@ -278,8 +276,7 @@ Now your mapping directory should look like this :
  └── length_of_each_scaffold_of_ath_cun_ensembl.txt
  
 
-G) Retain data mapping only to Autosomal chromosomes from the reference.
-
+I) Retain data mapping only to Autosomal chromosomes from the reference.
 --------------------------------------------------------------------------
 
 I like to keep things neat, so I am moving out of ``mapping`` directory and creating a new directory called ``PSMC`` under ``PSMC_Tut``. We will process further steps in ``PSMC`` folder. 
@@ -299,7 +296,7 @@ I like to keep things neat, so I am moving out of ``mapping`` directory and crea
  This took about 45 minutes. 
 
 
-H) Creating consensus fq file 
+J) Creating consensus fq file 
 ------------------------------
 
 .. code-block::
