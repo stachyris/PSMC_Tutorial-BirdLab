@@ -134,7 +134,9 @@ Let's now scale this to ``years``.
 
  $ ~/softs/psmc/utils/psmc_plot.pl -R -u 4e-09 -g 2 -pY50000 JO_diploid ../JO_diploid_combined.psmc
 
- .. attention::
+ 
+.. attention::
 
-  Non-scaled plot helps us to gauge the results - ideally the trajectory of your PSMC curve should not change/alter from non-sclaed to scaled. 
+ Non-scaled plot helps us to gauge the results - ideally the trajectory of your PSMC curve should not 
+ change/alter from non-sclaed to scaled. 
                                                                         
