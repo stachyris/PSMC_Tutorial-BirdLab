@@ -108,6 +108,33 @@ Your overall directory structure should look like this now
 .. code-block:: console 
  
  $ cat ../JO_diploid.psmc JO_diploid_round-*.psmc > JO_diploid_combined.psmc
- 
 
+
+
+C) Final text output
+--------------------
+
+Now we need to transform these results in a way which is easy to interpret. So, for that we need ``generation time``, ``mutation rate``. First we will generate the ``R`` compatible outputs without scaling ``Θ`` the data. 
+
+.. code-block:: console
+
+ $ ~/softs/psmc/utils/psmc_plot.pl -S -R -u 4e-09 -g 2 JO_diploid_no_scaling ./JO_diploid.psmc
+
+
+Let's now scale this to ``years``. 
+
+.. note::
+
+ During the bootstrapping step we ``combined`` the outputs. This ``combined`` file contains data for 100 iterations of bootstapping and original PSMC 
+ results. So we can scale just that one file. 
+
+.. code-block:: console
+
+ $ mkdir final_text_output; cd final_text_output
+
+ $ ~/softs/psmc/utils/psmc_plot.pl -R -u 4e-09 -g 2 -pY50000 JO_diploid ../JO_diploid_combined.psmc
+
+ .. attention::
+
+  Non-scaled plot helps us to gauge the results - ideally the trajectory of your PSMC curve should not change/alter from non-sclaed to scaled. 
                                                                         
