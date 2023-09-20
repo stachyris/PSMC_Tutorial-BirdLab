@@ -130,7 +130,7 @@ Now we can start mapping
  $ bwa mem -M -t 16 -R "@RG\tID:JO_30x\tSM:JO_\tLB:IlluminaWGS\tPL:ILLUMINA" \ 
  /Users/vinaykl/PSMC_Tut/mapping/Athene_cunicularia.athCun1.dna.toplevel.fa \ 
  /Users/vinaykl/PSMC_Tut/SRR12705961/JO_R1_paired.fq.gz 
- /Users/vinaykl/PSMC_Tut/SRR12705961/JO_R2_paired.fq.gz \ 
+ /Users/vinaykl/PSMC_Tut/SRR12705961/JO_R2_paired.fq.gz \ |
  /Users/vinaykl/softs/samtools-1.18/bin/samtools view -bh - | \
  /Users/vinaykl/softs/samtools-1.18/bin/samtools sort -T tmp -o JO_map_athcun_ref.bam
 
