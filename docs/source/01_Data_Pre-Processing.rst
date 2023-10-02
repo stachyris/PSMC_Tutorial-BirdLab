@@ -90,7 +90,7 @@ Lets download the assembled genome in fasta file now
 
 .. code-block:: console
 
- $ wget https://ftp.ensembl.org/pub/release- 110/fasta/athene_cunicularia/dna/Athene_cunicularia.athCun1.dna.toplevel.fa.gz
+ $ wget https://ftp.ensembl.org/pub/release-110/fasta/athene_cunicularia/dna/Athene_cunicularia.athCun1.dna.toplevel.fa.gz
  $ gunzip Athene_cunicularia.athCun1.dna.toplevel.fa.gz
 
 
